@@ -1,6 +1,18 @@
 # Lookups
 
-Calculating _multiple_ columns based on a single column with _apply_
+### Passing multiple columns to _apply_
+
+'''
+cisco_web_filter_copy['aaaa'] = \
+    cisco_web_filter_copy.apply(lambda x:f( x['Hostname'], x['Product ID'] ) , axis=1)
+'''
+
+'''
+def f(a, b):    
+    return( a+b )
+ '''
+
+### Calculating _multiple_ columns based on a single column with _apply_
 
 ```
 cisco_web_filter_copy[['Device Type', 'DeviceCatalogIndex', 'DeviceCatalogModelName', 'Standard HW']] = \
