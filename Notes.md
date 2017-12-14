@@ -13,7 +13,7 @@ A	B
 ```
 Then `df.loc[1]` returns two rows!
 
-
+```
 A	B
 1	a2	b2
 1	a4	b4
