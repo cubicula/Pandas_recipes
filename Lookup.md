@@ -3,12 +3,12 @@
 ### Passing multiple columns to _apply_
 
 ```
-cisco_web_filter_copy['aaaa'] = \
-    cisco_web_filter_copy.apply(lambda x:f( x['Hostname'], x['Product ID'] ) , axis=1)
+cisco_web_filter_copy['a plus b'] = \
+    cisco_web_filter_copy.apply(lambda x:f_add( x['Hostname'], x['Product ID'] ) , axis=1)
 ```
 
 ```
-def f(a, b):    
+def f_add(a, b):    
     return( a+b )
 ```
 
